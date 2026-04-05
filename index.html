@@ -59,7 +59,7 @@
   <button onclick="showMessage()">Klik di sini</button>
 
   <div id="message">
-    Makasih ya udah sampai sini… aku tunggu kamu balik lagi, jangan lama-lama ya 👉👈✨
+    < Makasih ya udah sampai sini… aku tunggu kamu balik lagi, jangan lama-lama ya 👉👈✨> 
   </div>
 </div>
 
@@ -68,11 +68,12 @@
     document.querySelector(".container").innerHTML = `
       <img src="https://i.imgur.com/yWguOOS.gif" width="200">
       <h1>Untuk Kamu 💖</h1>
-      <p>Cinta dari aku kalau kamu suka… jangan lupa balik buat pesen lagi ya 🫶✨</p>
+      <p>Cinta dari aku kalau kamu suka… jangan lupa balik buat pesen lagi ya 🫶✨
+      _Ellpack_</p>
     `;
   }
 
-  const expiredDate = new Date("2026-04-06T23:59:00").getTime();
+  const expiredDate = new Date("2026-04-07T17:59:00").getTime();
   const now = new Date().getTime();
 
   if (now > expiredDate) {
