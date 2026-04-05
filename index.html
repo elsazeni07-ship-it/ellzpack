@@ -15,7 +15,7 @@
     }
 
     .container {
-      margin-top: 80px;
+      margin-top: 100px;
       padding: 20px;
     }
 
@@ -40,7 +40,6 @@
       display: none;
       margin-top: 20px;
       color: #d63384;
-      font-size: 18px;
     }
 
     .expired {
@@ -53,7 +52,7 @@
 
 <body>
 
-<div class="container" id="mainContent">
+<div class="container">
   <img src="https://i.imgur.com/cXkdMa4.gif" alt="foto">
   <h1>Hai Kamu 💖</h1>
   <p>Aku cuma mau bilang sesuatu yang sederhana...</p>
@@ -66,10 +65,14 @@
 
 <script>
   function showMessage() {
-    document.getElementById("message").style.display = "block";
+    document.querySelector(".container").innerHTML = `
+      <img src="https://i.imgur.com/yWguOOS.gif" width="200">
+      <h1>Untuk Kamu 💖</h1>
+      <p>Cinta dari aku kalau kamu suka… jangan lupa balik buat pesen lagi ya 🫶✨</p>
+    `;
   }
 
-  const expiredDate = new Date("2026-04-08T20:59:00").getTime();
+  const expiredDate = new Date("2026-04-06T23:59:00").getTime();
   const now = new Date().getTime();
 
   if (now > expiredDate) {
