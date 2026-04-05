@@ -1,61 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-<style>
-body {
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #ffd6e7, #ffeef5);
-  font-family: Arial, sans-serif;
-  text-align: center;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untuk Kamu 💖</title>
 
-.container {
-  margin-top: 100px;
-}
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ffd6e7, #ffeef5);
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
 
-img {
-  border-radius: 20px;
-}
+    .container {
+      margin-top: 80px;
+      padding: 20px;
+    }
 
-button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 20px;
-  background: #ff4d88;
-  color: white;
-  cursor: pointer;
-}
+    img {
+      width: 200px;
+      max-width: 80%;
+      border-radius: 20px;
+    }
 
-#message {
-  display: none;
-  margin-top: 20px;
-  color: #d63384;
-}
-</style>
+    button {
+      margin-top: 20px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 20px;
+      background: #ff4d88;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #message {
+      display: none;
+      margin-top: 20px;
+      color: #d63384;
+      font-size: 18px;
+    }
+
+    .expired {
+      margin-top: 100px;
+      font-size: 22px;
+      color: #d63384;
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container">
-  <img src="https://i.imgur.com/cXkdMa4.gif" alt="foto" width="200">
+<div class="container" id="mainContent">
+  <img src="https://i.imgur.com/cXkdMa4.gif" alt="foto">
   <h1>Hai Kamu 💖</h1>
   <p>Aku cuma mau bilang sesuatu yang sederhana...</p>
   <button onclick="showMessage()">Klik di sini</button>
+
   <div id="message">
     Makasih ya udah sampai sini… aku tunggu kamu balik lagi, jangan lama-lama ya 👉👈✨
   </div>
 </div>
 
 <script>
-function showMessage() {
-  document.querySelector(".container").innerHTML = `
-    <img src="https://i.imgur.com/yWguOOS.gif" width="200">
-    <h1>Untuk Kamu 💖</h1>
-    <p>Cinta dari aku kalau kamu suka… jangan lupa balik buat beli lagi ya 🫶✨</p>
-  `;
-}
+  function showMessage() {
+    document.getElementById("message").style.display = "block";
+  }
+
+  const expiredDate = new Date("2026-04-08T20:59:00").getTime();
+  const now = new Date().getTime();
+
+  if (now > expiredDate) {
+    document.body.innerHTML = `
+      <div class="expired">
+        💌 Link ini sudah tidak tersedia lagi
+      </div>
+    `;
+  }
 </script>
 
 </body>
