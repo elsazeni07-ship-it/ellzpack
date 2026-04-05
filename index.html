@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffd6e7, #ffeef5);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.container {
+  margin-top: 100px;
+}
+
+img {
+  border-radius: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  background: #ff4d88;
+  color: white;
+  cursor: pointer;
+}
+
+#message {
+  display: none;
+  margin-top: 20px;
+  color: #d63384;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <img src="https://i.imgur.com/cXkdMa4.gif" alt="foto" width="200">
+  <h1>Hai Kamu 💖</h1>
+  <p>Aku cuma mau bilang sesuatu yang sederhana...</p>
+  <button onclick="showMessage()">Klik di sini</button>
+  <div id="message">
+    Makasih ya udah sampai sini… aku tunggu kamu balik lagi, jangan lama-lama ya 👉👈✨
+  </div>
+</div>
+
+<script>
+function showMessage() {
+  document.querySelector(".container").innerHTML = `
+    <img src="https://i.imgur.com/yWguOOS.gif" width="200">
+    <h1>Untuk Kamu 💖</h1>
+    <p>Cinta dari aku kalau kamu suka… jangan lupa balik lagi ya 🫶✨</p>
+  `;
+}
+</script>
+
+</body>
+</html>
